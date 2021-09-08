@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'capture_pad',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
