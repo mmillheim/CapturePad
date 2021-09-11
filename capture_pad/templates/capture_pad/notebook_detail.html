@@ -1,0 +1,13 @@
+{% extends 'capture_pad/base.html' %} {% block content %}
+<h2>{{ notebook.title }} <a href="">(edit)</a></h2>
+<h4>Active: {{ notebook.active }}</h4>
+
+<h3>Years <a href="">(+)</a></h3>
+<ul>
+    {% for year in notebook.years.all %}
+    <li>
+        <a href="{% url 'year_detail' pk=year.pk %}">{{ year.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -47,7 +47,7 @@ class Note(models.Model):
     date = models.DateField
     dueDate = models.DateField
 
-    month = models.ForeignKey(Day, on_delete=models.CASCADE, related_name='notes')
+    day = models.ForeignKey(Day, on_delete=models.CASCADE, related_name='notes')
 
     def __str__(self):
         return self.textContent

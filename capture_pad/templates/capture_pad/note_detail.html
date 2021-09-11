@@ -1,0 +1,10 @@
+{% extends 'capture_pad/base.html' %} {% block content %}
+<h2>{{ note.textContent }} <a href="">(edit)</a></h2>
+
+<h3>Notes <a href="">(+)</a></h3>
+<ul>
+    <li>Complete: {{ note.complete }}</li>
+    <li>Day: {{ note.day }}</li>
+    <li>Due Date: {{ note.dueDate }}</li>
+</ul>
+{% endblock %}

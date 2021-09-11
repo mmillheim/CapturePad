@@ -1,0 +1,12 @@
+{% extends 'capture_pad/base.html' %} {% block content %}
+<h2>{{ month.name }} <a href="">(edit)</a></h2>
+
+<h3>Days <a href="">(+)</a></h3>
+<ul>
+    {% for day in month.days.all %}
+    <li>
+        <a href="{% url 'day_detail' pk=day.pk %}">{{ day.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
