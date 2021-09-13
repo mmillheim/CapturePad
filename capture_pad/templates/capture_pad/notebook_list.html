@@ -1,9 +1,9 @@
 {% extends 'capture_pad/base.html' %} {% block content %}
-<h2>Notebooks <a href="">(+)</a></h2>
+<h2>Notebooks <a href="{% url 'notebook_create' %}">(+)</a></h2>
 <ul>
     {% for notebook in notebooks %}
     <li>
-        <a href="">{{ notebook.title }}</a>
+        <a href="{% url 'notebook_detail' pk=notebook.pk %}">{{ notebook.title }}</a>
     </li>
     {% endfor %}
 </ul>

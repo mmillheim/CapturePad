@@ -1,7 +1,7 @@
 {% extends 'capture_pad/base.html' %} {% block content %}
-<h2>{{ month.name }} <a href="">(edit)</a></h2>
-
-<h3>Days <a href="">(+)</a></h3>
+<h2>{{ month.name }} <a href="{% url 'month_edit' pk=month.pk %}">(edit)</a></h2>
+<a href="{% url 'month_delete' pk=month.pk %}">Delete</a>
+<h3>Days <a href="{% url 'day_create' %}">(+)</a></h3>
 <ul>
     {% for day in month.days.all %}
     <li>

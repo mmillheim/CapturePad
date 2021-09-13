@@ -20,4 +20,5 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('capture_pad.urls')),
+    path('api_auth', include('rest_framework.urls', namespace='rest_framework')),
 ]

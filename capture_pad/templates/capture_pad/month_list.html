@@ -1,9 +1,9 @@
 {% extends 'capture_pad/base.html' %} {% block content %}
-<h2>Months <a href="">(+)</a></h2>
+<h2>Months <a href="{% url 'month_create' %}">(+)</a></h2>
 <ul>
     {% for month in months %}
     <li>
-        <a href="">{{ month.name }}</a>
+        <a href="{% url 'month_detail' pk=month.pk %}">{{ month.name }}</a>
     </li>
     {% endfor %}
 </ul>
