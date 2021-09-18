@@ -1,0 +1,1 @@
+web: gunicorn capture_pad_django.wsgi

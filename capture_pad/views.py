@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from rest_framework import generics
+from rest_framework import generics, permissions
 from .serializers import NotebookSerializer, YearSerializer, MonthSerializer, DaySerializer, NoteSerializer
 
 # Create your views here.
@@ -190,10 +190,16 @@ def note_delete(request, pk):
 #Notebooks
 class NotebookList(generics.ListCreateAPIView):
     queryset = Notebook.objects.all()
+    permission_classes = [
+        permissions.AllowAny
+    ]
     serializer_class = NotebookSerializer
 
 class NotebookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Notebook.objects.all()
+    permission_classes = [
+        permissions.AllowAny
+    ]
     serializer_class = NotebookSerializer
 
 #Years
